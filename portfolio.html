@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="intro.css">
+    <title>Portfolio - Thomas E. Franca</title>
+</head>
+
+<body>
+    <header class="container">
+        <div class="page-header">
+            <div class="logo">
+                <a href="https://www.linkedin.com/in/thomas-cornelio/?locale=en-US" target="_blank" rel="noreferrer noopener">Thomas E. Franca</a>
+            </div>
+            <input type="checkbox" id="click">
+
+            <label for="click" class="mainicon">
+                <div class="menu">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </label>
+            <ul>
+                <li><a href="index.html" style="--navAni:1">Home</a></li>
+                <li><a href="about.html" style="--navAni:2">About</a></li>
+                <li><a href="skills.html" style="--navAni:3">Skills</a></li>
+                <li><a href="portfolio.html" class="active" style="--navAni:4">Portfolio</a></li>
+                <li><a href="contact.html" style="--navAni:5">Contact</a></li>
+            </ul>
+            <label class="mode">
+                <input type="checkbox" id="darkModeToggle">
+                <i class='bx bxs-moon'></i>
+            </label>
+        </div>
+    </header>
+
+    <section class="container content-section">
+        <div class="section-heading">
+            <h3>Portfolio</h3>
+            <h1>Selected <span>experience</span></h1>
+            <p>A quick view of the roles, domains and technical focus areas that shape the way I design and deliver software.</p>
+        </div>
+
+        <div class="card-grid">
+            <article class="project-card">
+                <span>Software Engineer</span>
+                <h2>Ruby on Rails and React delivery</h2>
+                <p>Developing full-stack features, improving scalability, reducing technical debt, reviewing code and supporting high-complexity demands in a production environment.</p>
+            </article>
+            <article class="project-card">
+                <span>Financial Operations</span>
+                <h2>Billing and receivables background</h2>
+                <p>Hands-on experience with accounts receivable, invoice issuance, billing adjustments, discounts, plan changes and termination fine calculations.</p>
+            </article>
+            <article class="project-card">
+                <span>Customer Experience</span>
+                <h2>SaaS support and systemic analysis</h2>
+                <p>Work across SaaS support, bug validation, feature parameterization, process improvement and communication with business-facing teams.</p>
+            </article>
+            <article class="project-card">
+                <span>Artificial Intelligence</span>
+                <h2>Postgraduate specialization</h2>
+                <p>Currently expanding expertise in Generative AI, Machine Learning, Deep Learning, NLP, Computer Vision and enterprise-oriented AI application development.</p>
+            </article>
+            <article class="project-card">
+                <span>Quality and Agile</span>
+                <h2>Structured delivery mindset</h2>
+                <p>Background in Quality Management, Agile methodologies, DMAIC and process optimization applied to engineering and operations.</p>
+            </article>
+            <article class="project-card">
+                <span>Global Collaboration</span>
+                <h2>Multilingual communication</h2>
+                <p>Professional communication in English, plus Spanish and French proficiency that supports global and multicultural environments.</p>
+            </article>
+        </div>
+    </section>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+        darkModeToggle.addEventListener('change', () => {
+            if (darkModeToggle.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="intro.css">
+    <title>Contact - Thomas E. Franca</title>
+</head>
+
+<body>
+    <header class="container">
+        <div class="page-header">
+            <div class="logo">
+                <a href="https://www.linkedin.com/in/thomas-cornelio/?locale=en-US" target="_blank" rel="noreferrer noopener">Thomas E. Franca</a>
+            </div>
+            <input type="checkbox" id="click">
+
+            <label for="click" class="mainicon">
+                <div class="menu">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </label>
+            <ul>
+                <li><a href="index.html" style="--navAni:1">Home</a></li>
+                <li><a href="about.html" style="--navAni:2">About</a></li>
+                <li><a href="skills.html" style="--navAni:3">Skills</a></li>
+                <li><a href="portfolio.html" style="--navAni:4">Portfolio</a></li>
+                <li><a href="contact.html" class="active" style="--navAni:5">Contact</a></li>
+            </ul>
+            <label class="mode">
+                <input type="checkbox" id="darkModeToggle">
+                <i class='bx bxs-moon'></i>
+            </label>
+        </div>
+    </header>
+
+    <section class="container content-section">
+        <div class="section-heading">
+            <h3>Contact</h3>
+            <h1>Let's <span>talk</span></h1>
+            <p>I'm open to software engineering, full-stack, SaaS, fintech and AI-related opportunities. The best way to reach me is through the channels below.</p>
+        </div>
+
+        <div class="contact-list">
+            <a class="contact-card" href="mailto:thomasfcornelio@gmail.com">
+                <i class='bx bx-envelope'></i>
+                <div>
+                    <span>Email</span>
+                    <strong>thomasfcornelio@gmail.com</strong>
+                </div>
+            </a>
+            <a class="contact-card" href="https://www.linkedin.com/in/thomas-cornelio/?locale=en-US" target="_blank" rel="noreferrer noopener">
+                <i class='bx bxl-linkedin'></i>
+                <div>
+                    <span>LinkedIn</span>
+                    <strong>Thomas E. Franca</strong>
+                </div>
+            </a>
+            <a class="contact-card" href="https://github.com/thomas-franca" target="_blank" rel="noreferrer noopener">
+                <i class='bx bxl-github'></i>
+                <div>
+                    <span>GitHub</span>
+                    <strong>thomas-franca</strong>
+                </div>
+            </a>
+            <div class="contact-card">
+                <i class='bx bx-world'></i>
+                <div>
+                    <span>Languages</span>
+                    <strong>Portuguese, English, Spanish and French</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+        darkModeToggle.addEventListener('change', () => {
+            if (darkModeToggle.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+    </script>
+</body>
+
+</html>
